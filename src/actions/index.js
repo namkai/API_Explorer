@@ -41,3 +41,11 @@ export const getResponseData = (data) => {
         payload: data
     }
 }
+
+export const resetResponseData = () => {
+    const data = [];
+    return {
+        type: types.RESET_RESPONSE,
+        payload: data
+    }
+}

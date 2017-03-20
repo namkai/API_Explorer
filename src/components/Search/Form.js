@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 
-import {getResponseData, reformatHeader} from '../../actions/index';
+import {getResponseData, reformatHeader, resetResponseData} from '../../actions/index';
 
 import Headers from './Header/Headers';
 import Url from './Url';
@@ -25,6 +25,7 @@ class Form extends Component {
 
     async sendData() {
         await this.formatData(this.props.data)
+        // await this.props.dispatch(resetResponseData())
         this.props.dispatch(getResponseData(this.props.data));
 
     }
@@ -53,7 +54,6 @@ const style = {
     containerStyle: {
         backgroundColor: 'white',
         marginTop: '5%',
-        borderRadius: '5px',
         paddingLeft: '40px',
         paddingRight: '40px'
     },

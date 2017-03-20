@@ -5,6 +5,20 @@ export default function(state = initialState.response, action) {
     switch (action.type) {
         case types.RESPONSE_DATA:
             return {
+                response: {
+                    status: 200,
+                    data: action.payload
+                }
+            }
+        case types.BAD_RESPONSE:
+            return {
+                response: {
+                    status: 404,
+                    data: action.payload
+                }
+            }
+        case types.RESET_RESPONSE:
+            return {
                 response: action.payload
             }
         default:

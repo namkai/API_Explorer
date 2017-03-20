@@ -4,6 +4,8 @@ export default {
     headers : [['Content-Type', 'application/json']],
     formattedHeaders : {},
     body : [],
-    response : [],
-    badResponse: '404 not found'
+    response : {
+        status: 200,
+        data: {}
+    }
 }

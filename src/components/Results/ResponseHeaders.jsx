@@ -11,20 +11,15 @@ class ResponseHeaders extends Component {
         });
     }
     render() {
-        console.log(`ResponseHeadersList`, this.props);
-        let {response} = this.props;
-        if (response === undefined) {
-            return (
-                <div></div>
-            )
-        }
-        let jsonData = JSON.stringify(response.headers, null, "\t")
+        let {data} = this.props.response;
+        let jsonData = JSON.stringify(data.headers, null, "\t")
+
         return (
             <li>
                 <div className="collapsible-header">
                     <i className="material-icons">filter_drama</i>Headers</div>
                 <div className="collapsible-body">
-                    <textarea id="ResponseHeaders" className="materialize-textarea" type="text" value={jsonData}/>
+                    <textarea readOnly id="ResponseHeaders" className="materialize-textarea" type="text" value={jsonData}/>
                 </div>
             </li>
         )

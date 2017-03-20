@@ -9,21 +9,15 @@ class ResponseUrl extends Component {
         super(props);
     }
     render() {
-        console.log(`ResponseUrlList`, this.props);
-        let {response} = this.props;
-        if(response === undefined) {
-            return (
-                <div></div>
-            )
-        }
-        let jsonData = JSON.stringify(response.headers, null, "\t")
+        let {data} = this.props.response;
+
         return (
                 <li>
                     <div className="collapsible-header">
-                        <i className="material-icons">filter_drama</i>Headers</div>
+                        <i className="material-icons">filter_drama</i>URL</div>
                     <div className="collapsible-body">
-                        <textarea readonly id="ResponseUrl" className="materialize-textarea"
-                            type="text" value={jsonData}/>
+                        <textarea readOnly id="ResponseUrl" className="materialize-textarea"
+                            type="text" value={data.config.url}/>
                     </div>
                 </li>
         )
