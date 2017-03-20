@@ -3,8 +3,8 @@ import * as types from '../constants/actionTypes';
 import axios from 'axios';
 
 export function* getResponseData({payload}) {
-    console.log(`I'm the saga that's hit!`, payload);
-    let {method, url, formattedHeaders} = payload;
+    const {method, url, formattedHeaders} = payload;
+
     switch (method) {
         case types.POST:
             try {

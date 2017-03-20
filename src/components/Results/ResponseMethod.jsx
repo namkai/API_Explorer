@@ -8,6 +8,11 @@ class ResponseMethod extends Component {
     constructor(props) {
         super(props);
     }
+    componentWillMount() {
+        $(document).ready(function() {
+            $('.collapsible').collapsible();
+        });
+    }
     render() {
         let {data} = this.props.response;
 

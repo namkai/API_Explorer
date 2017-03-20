@@ -12,6 +12,7 @@ class Result extends Component {
     constructor(props) {
         super(props);
     }
+
     render() {
         let {response} = this.props;
         console.log(`i'm the props`, response);
