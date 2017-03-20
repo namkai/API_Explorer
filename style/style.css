@@ -1,0 +1,12 @@
+
+body {
+    background-color: grey;
+}
+
+.container {
+    width: 85% !important;
+}
+
+.collapsible {
+    background: white;
+}
