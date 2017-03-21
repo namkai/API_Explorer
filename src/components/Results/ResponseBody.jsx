@@ -6,23 +6,20 @@ import Textarea from 'react-textarea-autosize';
 class ResponseBody extends Component {
     constructor(props) {
         super(props);
-        this.renderSize = this.renderSize.bind(this);
     }
-    renderSize() {
-        console.log(`i was clicked!`);
+    componentWillMount() {
         $(document).ready(function() {
             $('.collapsible').collapsible();
         });
     }
     render() {
-        console.log(this.props.response, `i'm this.props.respnse on body`);
         let {data} = this.props.response;
         let jsonData = JSON.stringify(data.data, null, "\t")
 
         return (
-                <li onClick={this.renderSize()}>
+                <li>
                     <div className="collapsible-header">
-                        <i className="material-icons">filter_drama</i>Body</div>
+                        <i className="fa fa-grav" aria-hidden="true"></i>Body</div>
                     <div className="collapsible-body">
                         <Textarea readOnly id="ResponseBody" className="materialize-textarea"
                             type="text" value={jsonData.toString()}/>

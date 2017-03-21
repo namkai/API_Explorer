@@ -19,7 +19,7 @@ class ResponseHeaders extends Component {
         return (
             <li>
                 <div className="collapsible-header">
-                    <i className="material-icons">filter_drama</i>Headers</div>
+                    <i className="fa fa-users" aria-hidden="true"></i>Headers</div>
                 <div className="collapsible-body">
                     <Textarea readOnly id="ResponseHeaders" className="materialize-textarea" type="text" value={jsonData}/>
                 </div>

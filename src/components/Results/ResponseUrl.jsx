@@ -8,13 +8,18 @@ class ResponseUrl extends Component {
     constructor(props) {
         super(props);
     }
+    componentWillMount() {
+        $(document).ready(function() {
+            $('.collapsible').collapsible();
+        });
+    }
     render() {
         let {data} = this.props.response;
 
         return (
                 <li>
                     <div className="collapsible-header">
-                        <i className="material-icons">filter_drama</i>URL</div>
+                        <i className="fa fa-link" aria-hidden="true"></i>URL</div>
                     <div className="collapsible-body">
                         <textarea readOnly id="ResponseUrl" className="materialize-textarea"
                             type="text" value={data.config.url}/>

@@ -1,6 +1,8 @@
 import {put, call} from 'redux-saga/effects';
-import * as types from '../constants/actionTypes';
 import axios from 'axios';
+
+import * as types from '../constants/actionTypes';
+
 
 export function* getResponseData({payload}) {
     const {method, url, formattedHeaders} = payload;

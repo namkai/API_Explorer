@@ -1,9 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-
-
-
 class ResponseMethod extends Component {
     constructor(props) {
         super(props);
@@ -19,7 +16,7 @@ class ResponseMethod extends Component {
         return (
                 <li>
                     <div className="collapsible-header">
-                        <i className="material-icons">filter_drama</i>Method</div>
+                        <i className="fa fa-bolt" aria-hidden="true"></i>Method</div>
                     <div className="collapsible-body">
                         <textarea readOnly id="ResponseMethod" className="materialize-textarea"
                             type="text" value={data.config.method.toUpperCase()}/>
