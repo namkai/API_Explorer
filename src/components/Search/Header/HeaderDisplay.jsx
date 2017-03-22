@@ -1,19 +1,17 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import HeaderItem from './HeaderItem';
 
 class HeaderDisplay extends Component {
-    constructor(props) {
-        super(props);
-    }
+    
     renderHeaders() {
-        let {headers} = this.props;
+        const { headers } = this.props;
         let counter = 0;
-        let result = headers.map((ele) => {
+        const result = headers.map((ele) => {
             counter++;
-            return (<HeaderItem key={counter} headerKey={ele[0]} headerValue={ele[1]}/>)
-        })
+            return (<HeaderItem key={counter} headerKey={ele[0]} headerValue={ele[1]} />);
+        });
         return result;
     }
     render() {
@@ -27,7 +25,7 @@ class HeaderDisplay extends Component {
                         </tr>
                     </thead>
                 </table>
-            )
+            );
         }
         return (
             <div className="row">
@@ -45,12 +43,12 @@ class HeaderDisplay extends Component {
                 </table>
                 </div>
             </div>
-        )
+        );
     }
 }
 
 function mapStateToProps(state) {
-    return {headers: state.data.headers}
+    return { headers: state.data.headers };
 }
 
-export default connect(mapStateToProps)(HeaderDisplay)
+export default connect(mapStateToProps)(HeaderDisplay);

@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 import Nav from './Nav';
 import Form from './Search/Form';
@@ -8,11 +8,11 @@ export default class App extends Component {
     render() {
         return (
             <div>
-                <Nav/>
+                <Nav />
                 <div className="container">
                     <div className="row">
-                        <Form/>
-                        <Result/>
+                        <Form />
+                        <Result />
                     </div>
                 </div>
             </div>

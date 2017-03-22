@@ -1,51 +1,36 @@
 import * as types from '../constants/actionTypes';
 
-export const addHeader = (data) => {
-    return {
+export const addHeader = (data) => ({
         type: types.ADD_HEADER,
         payload: data
-    }
-}
+    });
 
-export const reformatHeader = (data) => {
-    return {
+export const reformatHeader = (data) => ({
         type: types.REFORMAT_HEADER,
         payload: data
-    }
-}
+    });
 
-export const addUrl = (data) => {
-    return {
+export const addUrl = (data) => ({
         type: types.ADD_URL,
         payload: data
-    }
-}
+    });
 
-export const addMethod = (data) => {
-    return {
+export const addMethod = (data) => ({
         type: types.ADD_METHOD,
         payload: data
-    }
-}
+    });
 
-export const addBody = (data) => {
-    return {
+export const addBody = (data) => ({
         type: types.ADD_BODY,
         payload: data
-    }
-}
+    });
 
-export const getResponseData = (data) => {
-    return {
+export const reformatBody = (data) => ({
+        type: types.REFORMAT_BODY,
+        payload: data
+    });
+
+export const getResponseData = (data) => ({
         type: types.RESPONSE,
         payload: data
-    }
-}
-
-export const resetResponseData = () => {
-    const data = [];
-    return {
-        type: types.RESET_RESPONSE,
-        payload: data
-    }
-}
+    });
