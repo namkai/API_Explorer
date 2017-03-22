@@ -36,7 +36,7 @@ export default function (state = initialState, action) {
         case types.REFORMAT_BODY:
             return {
                 ...state,
-                formattedBody: action.payload
+                formattedBody: [action.payload]
             };
         default:
             return state;
